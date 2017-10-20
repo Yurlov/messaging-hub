@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>register</title>
+	<link href="../static/css/bootstrap.css" th:href="@{../css/bootstrap.css}" rel="stylesheet" type="text/css"/>
+	<link href="../static/css/signin.css" th:href="@{../css/signin.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container">
+	<div class="form-signin">
+		<h2 class="form-signin-heading">Please register</h2><br/>
+		<form th:object="${registerRequest}" method="post" content="application/json">
+			<input type="text" name="name" class="form-control" placeholder="user name" th:field="*{body.userName}"/>
+			<input type="text" name="name" class="form-control" placeholder="first name" th:field="*{body.firstName}"/>
+			<input type="text" name="name" class="form-control" placeholder="last name" th:field="*{body.lastName}"/>
+			<input type="email" name="name" class="form-control" placeholder="email" th:field="*{body.email}"/>
+			<input type="text" name="name" class="form-control" placeholder="mobile" th:field="*{body.mobile}"/>
+			<a href="verify">Click to Verify</a>
+			<input type="text" name="name" class="form-control" placeholder="code" th:field="*{body.verificationCode}"/>
+			<input type="text" name="name" class="form-control" placeholder="address" th:field="*{body.address}"/>
+			<input type="password" name="password" class="form-control" placeholder="password" th:field="*{secure.password}"/>
+			<input class="btn btn-lg btn-primary btn-block" type="submit" value="Register"/>
+		</form>
+	</div>
+</div>
+</body>
+</html>

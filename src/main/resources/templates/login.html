@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>login</title>
+	<link href="../static/css/bootstrap.css" th:href="@{../css/bootstrap.css}" rel="stylesheet" type="text/css"/>
+	<link href="../static/css/signin.css" th:href="@{../css/signin.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container">
+	<div class="form-signin">
+		<h2 class="form-signin-heading">Login</h2><br/>
+		<form th:object="${loginRequest}" method="post" content="application/json">
+			<input type="text" name="name" class="form-control" placeholder="login/email/mobile" th:field="*{body.userId}"/>
+			<input type="password" name="password" class="form-control" placeholder="password" th:field="*{secure.password}"/>
+			<input class="btn btn-lg btn-primary btn-block" type="submit" value="Login"/>
+		</form>
+	</div>
+</div>
+</body>
+</html>

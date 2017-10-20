@@ -1,0 +1,28 @@
+{
+  "body": {
+    "apps": [
+      {
+        "app": "cerebral",
+        "role": {
+          "name": "trainee",
+          "permissions": [
+            {
+              "allow": 1,
+              "action": "GET|POST|PUT|DELETE",
+              "resource": ".*"
+            }
+          ]
+        }
+      }
+    ],
+    "email": "allen.liu@gtedx.com",
+    "first_name": "Allen",
+    "id": "40ecc76884054f30be34e0a2b3767f35",
+    "last_name": "Liu",
+    "mobile": "+6591705553",
+    "status": "enabled",
+    "username": "allenlkq"
+  },
+  "code": 200,
+  "message": "OK"
+}
